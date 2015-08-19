@@ -1,3 +1,7 @@
+body {
+    background: #f2f2f2
+}
+
 .products {
     background: #f2f2f2;
 }
@@ -31,14 +35,18 @@
 
 .profile-picture {
     position: relative;
-    width: 60px;
-    height: 60px;
-    float: left;
+    width: 34px;
+    height: 34px;
+    float: right;
     margin-right: 2%;
     background: url('../img/profile-picture.png') no-repeat;
     background-size: 100% 100%;
     border-radius: 100px;
-    border: 3px solid #ffffff;
+    border: 1px solid #ffffff;
+}
+
+.top {
+    height: 30px;
 }
 
 .profile-picture img {
@@ -63,7 +71,6 @@ img.mask {
 
 .card-information .product-details {
     padding: 4%;
-    min-height: 180px;
 }
 
 .card-information .product-details h1 {
@@ -77,32 +84,42 @@ img.mask {
     font-weight: 300;
 }
 
-.top {
-    margin: 1.4% 0;
-}
-
 .user {
-    margin: 0;
-    width: 70%;
-    float: left;
+    color: #ffffff;
+    padding: 6% 3%;
+    background: -webkit-gradient(linear, 0% 0%, 0% 100%, from(rgba(0, 0, 0, .9)), to(rgba(0, 0, 0, 0)), color-stop(1, rgba(0, 0, 0, 1)));
+    background: -moz-linear-gradient(19% 75% 90deg, rgba(0, 0, 0, .9), rgba(0, 0, 0, 0), rgba(0, 0, 0, 1) 100%);
+    z-index: 2;
+    position: absolute;
+    top: 0;
+    width: 100%;
+    height: auto;
+    text-align: right;
+    -webkit-border-top-left-radius: 6px;
+    -webkit-border-top-right-radius: 6px;
+    -moz-border-radius-topleft: 6px;
+    -moz-border-radius-topright: 6px;
+    border-top-left-radius: 6px;
+    border-top-right-radius: 6px;
 }
 
 .user p {
-    font-family: 'Roboto Condensed', sans-serif;
-    font-size: 20px;
+    font-weight: 100;
+    font-size: 18px;
     line-height: 1;
-    margin: 2% 0 0 0;
+    margin: 2% 4% 0 0;
+    opacity: .7;
 }
 
 .user a {
-    margin: 0;
+    margin: 0 4% 0 0;
     color: #8e8e8e;
     font-size: 14px;
     font-weight: 100;
 }
 
 .name {
-    float: left;
+    float: right;
     width: 80%;
 }
 
@@ -110,8 +127,8 @@ img.mask {
     text-align: center;
     font-weight: 100;
     font-size: 14px;
-    float: left;
-    width: 30%;
+    width: 70%;
+    margin: 4% auto;
 }
 
 .download p {
@@ -157,9 +174,9 @@ img.mask {
 
 .card-information .location .adress {
     position: absolute;
-    bottom: 4%;
+    bottom: 20%;
     z-index: 2;
-    background: rgba(255, 255, 255, 0.9);
+    background: rgba(255, 255, 255, 0.7);
     width: 80%;
     right: 10%;
     text-align: center;
@@ -263,16 +280,24 @@ img.mask {
     background-size: cover;
 }
 
+.pointer {
+    position: absolute;
+    top: 30px;
+    left: -20px;
+}
+
 
 /* Media Queries */
 
+@media (min-height: 730px) {
+    .footer {
+        position: fixed;
+        bottom: 0;
+        width: 100%;
+    }
+}
+
 @media (max-width: 1200px) {
-    .download {
-        width: 40%;
-    }
-    .user {
-        width: 60%;
-    }
     .button {
         font-size: 14px;
         background-size: 6%;
@@ -293,17 +318,12 @@ img.mask {
     .card-information .product-details p {
         font-size: 14px;
     }
-    .profile-picture {
-        width: 50px;
-        height: 50px;
-        border: 2px solid #ffffff;
-    }
     .button {
         background-position: 5% center;
         font-size: 14px;
     }
     .card-information .location .image {
-        height: 160px;
+        height: 140px;
     }
     .card-information .share h3 {
         margin: 2% 0;
@@ -313,9 +333,14 @@ img.mask {
         width: 40px;
         height: 40px;
     }
+    .download {
+        width: 80%;
+    }
+   
 }
 
 @media (max-width: 768px) {
+    .top{display: none;}
     .container {
         padding-right: 0;
         padding-left: 0;
@@ -327,19 +352,9 @@ img.mask {
         margin-left: 0;
         margin-right: 0;
     }
-    .user {
-        color: #ffffff;
-        padding: 4% 3%;
-        background: -webkit-gradient(linear, 0% 0%, 0% 100%, from(rgba(0, 0, 0, 0)), to(rgba(0, 0, 0, 1)), color-stop(.6, rgba(0, 0, 0, 8)));
-        background: -moz-linear-gradient(19% 75% 90deg, rgba(0, 0, 0, 0), rgba(0, 0, 0, 1), rgba(0, 0, 0, 8) 100%);
-        z-index: 2;
-        position: absolute;
-        top: 370px;
-        width: 100%;
-        height: 150px;
-    }
     .user p {
         font-size: 22px;
+        opacity: 1;
     }
     .user a {
         font-size: 18px;
@@ -360,6 +375,12 @@ img.mask {
         width: 60px;
         height: 60px;
     }
+    .user {bottom: 0;
+        padding: 6% 3% 10% 3%;
+        top: auto;
+     background: -webkit-gradient(linear, 0% 0%, 0% 100%, from(rgba(0, 0, 0, 0)), to(rgba(0, 0, 0, .9)), color-stop(1, rgba(0, 0, 0, 1)));
+    background: -moz-linear-gradient(19% 75% 90deg, rgba(0, 0, 0, 0), rgba(0, 0, 0, .9), rgba(0, 0, 0, 1) 100%);
+   }
     .name {
         text-align: right;
         float: right;
@@ -385,21 +406,13 @@ img.mask {
     .price {
         bottom: 20%;
     }
-    .download {
-        width: 60%;
-        margin: 0 auto 4% auto;
-        float: none;
-    }
-    .top {
-        margin: 0;
-    }
     .card-information .product-details {
         padding: 2% 4%;
         min-height: auto;
     }
-    .pointer {
-        position: absolute;
+     .pointer {
         top: -24px;
+        left: auto;
         right: 5%;
     }
 }
@@ -424,10 +437,21 @@ img.mask {
         height: 100px;
         padding: 4% 2% 0 2%;
     }
-    .user p {font-size: 16px;}
-    .user a {font-size: 14px;}
-    .price {font-size: 14px;
-        bottom: 30%}
-    .download {width: 90%;}
-    .swiper-button-prev, .swiper-button-next {display: none;}
+    .user p {
+        font-size: 16px;
+    }
+    .user a {
+        font-size: 14px;
+    }
+    .price {
+        font-size: 14px;
+        bottom: 30%
+    }
+    .download {
+        width: 90%;
+    }
+    .swiper-button-prev,
+    .swiper-button-next {
+        display: none;
+    }
 }

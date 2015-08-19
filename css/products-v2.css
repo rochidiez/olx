@@ -353,11 +353,12 @@ img.mask {
         margin-right: 0;
     }
     .user p {
-        font-size: 22px;
+        font-size: 18px;
         opacity: 1;
+        margin-top: 20px;
     }
     .user a {
-        font-size: 18px;
+        font-size: 20px;
     }
     .product-picture {
         margin: 0;
@@ -404,7 +405,8 @@ img.mask {
         margin: 0% 2% 2% 0;
     }
     .price {
-        bottom: 20%;
+        bottom: 24%;
+        font-size: 18px;
     }
     .card-information .product-details {
         padding: 2% 4%;
@@ -431,12 +433,7 @@ img.mask {
     .swiper-slide {
         height: 300px;
     }
-    .user {
-        top: 270px;
-        width: 100%;
-        height: 100px;
-        padding: 4% 2% 0 2%;
-    }
+  
     .user p {
         font-size: 16px;
     }

@@ -336,11 +336,12 @@ img.mask {
     .download {
         width: 80%;
     }
-   
 }
 
 @media (max-width: 768px) {
-    .top{display: none;}
+    .top {
+        display: none;
+    }
     .container {
         padding-right: 0;
         padding-left: 0;
@@ -376,16 +377,22 @@ img.mask {
         width: 60px;
         height: 60px;
     }
-    .user {bottom: 0;
+    .user {
+        bottom: 0;
         padding: 6% 3% 10% 3%;
         top: auto;
-     background: -webkit-gradient(linear, 0% 0%, 0% 100%, from(rgba(0, 0, 0, 0)), to(rgba(0, 0, 0, .9)), color-stop(1, rgba(0, 0, 0, 1)));
-    background: -moz-linear-gradient(19% 75% 90deg, rgba(0, 0, 0, 0), rgba(0, 0, 0, .9), rgba(0, 0, 0, 1) 100%);
-   }
+        background: -webkit-gradient(linear, 0% 0%, 0% 100%, from(rgba(0, 0, 0, 0)), to(rgba(0, 0, 0, .9)), color-stop(1, rgba(0, 0, 0, 1)));
+        background: -moz-linear-gradient(19% 75% 90deg, rgba(0, 0, 0, 0), rgba(0, 0, 0, .9), rgba(0, 0, 0, 1) 100%);
+    }
     .name {
         text-align: right;
         float: right;
         margin-right: 2%;
+        width: 50%;
+    }
+    .name p {
+        text-overflow: ellipsis;
+        overflow: hidden;
     }
     .products .container {
         width: 100%;
@@ -405,14 +412,14 @@ img.mask {
         margin: 0% 2% 2% 0;
     }
     .price {
-        bottom: 24%;
+        bottom: 20%;
         font-size: 18px;
     }
     .card-information .product-details {
         padding: 2% 4%;
         min-height: auto;
     }
-     .pointer {
+    .pointer {
         top: -24px;
         left: auto;
         right: 5%;
@@ -433,17 +440,13 @@ img.mask {
     .swiper-slide {
         height: 300px;
     }
-  
     .user p {
         font-size: 16px;
     }
     .user a {
         font-size: 14px;
     }
-    .price {
-        font-size: 14px;
-        bottom: 30%
-    }
+    .price {bottom: 14%;}
     .download {
         width: 90%;
     }

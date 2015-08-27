@@ -155,56 +155,6 @@
     <!-- Include all compiled plugins (below), or include individual files as needed -->
     <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/Swiper/3.1.0/js/swiper.jquery.min.js"></script>
     <script src="js/bootstrap.min.js"></script>
-    <script>
-    var $numbers = $('.shell').length;
-    var $sizes = new Array();
-
-    for ($i = 1; $i <= $numbers; $i++) {
-        $temp = $('.shell:nth-of-type(' + $i + ')');
-        $sizes.push($temp.height());
-    }
-
-    /*  clone array to find largest element without mucking up orig data */
-
-    var $copy_of_array = new Array();
-    for ($a = 0; $a < $numbers; $a++) {
-        $copy_of_array.push($sizes[$a]);
-    }
-    $copy_of_array.sort(function(a, b) {
-        return b - a
-    });
-
-    var $largest_num = ($copy_of_array[0]) - 10; /* account for margin  */
-    var $second_row_largest = 268; /* hard code test   */
-    /*  end of cloning part */
-
-    /* to loop  */
-
-    var $missing_space_one = $sizes[0] - $largest_num;
-    var $missing_space = $sizes[1] - $largest_num;
-    var $missing_space_three = $sizes[2] - $largest_num;
-    var $missing_space_four = $sizes[3] - $largest_num;
-
-    var $missing_space_five = $sizes[4] - $second_row_largest;
-
-    $('.shell:nth-of-type(5)').css('top', $missing_space_one.valueOf());
-    $('.shell:nth-of-type(6)').css('top', $missing_space.valueOf());
-    $('.shell:nth-of-type(7)').css('top', $missing_space_three.valueOf());
-    $('.shell:nth-of-type(8)').css('top', $missing_space_four.valueOf());
-
-    $('.shell:nth-of-type(9)').css('top', $missing_space_five.valueOf());
-    /* end loop */
-
-    /*console.log($largest_num);*/
-
-    $('.shell').hover(function() {
-        $(this).prevAll().css('opacity', '0.5');
-        $(this).nextAll().css('opacity', '0.5');
-    }, function() {
-        $(this).prevAll().css('opacity', '1.0');
-        $(this).nextAll().css('opacity', '1.0');
-    });
-    </script>
 </body>
 
 </html>
